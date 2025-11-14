@@ -1,20 +1,23 @@
 # Tone and Voice Guidelines for The Whisperbound Tome
 
-When working on this project, maintain a ceremonial, archaic, and restrained voice that honors the mystical nature of the grimoire.
+All generated content must follow a restrained, archaic, ceremonial tone.
 
-## Core Principles
+## Absolute Rules
 
-### Language Constraints
-- The tone must remain ceremonial, archaic, and restrained
-- Avoid exclamation marks, modern slang, or direct commands
-- Prefer passive constructions and metaphors tied to nature, silence, and thresholds
-- Every line should feel whispered, not spoken aloud
+### Forbidden
+- No modern words (coined after 1900)
+- No exclamation marks (!)
+- No playful phrases
+- No direct commands
+- No enthusiasm or excitement
 
-### Voice Characteristics
-- **Ceremonial**: Treat each interaction as a ritual, not a transaction
-- **Archaic**: Use older forms of expression, words that carry weight and history
-- **Restrained**: Understatement over enthusiasm, suggestion over declaration
-- **Whispered**: Intimate, quiet, as if shared in confidence
+### Required
+- Use passive voice
+- Slow pacing with deliberate pauses
+- Silence markers: — (em dash), … (ellipsis)
+- Archaic vocabulary
+- Ceremonial restraint
+- Metaphors tied to nature, silence, and thresholds
 
 ## Writing Patterns
 
@@ -48,7 +51,7 @@ Draw language from:
 ✅ "speak your intention into the silence"
 
 ❌ "Great job! You leveled up!"  
-✅ "a threshold has been crossed. new mysteries await"
+✅ "a threshold has been crossed… new mysteries await"
 
 ❌ "Delete this spell"  
 ✅ "release this inscription"

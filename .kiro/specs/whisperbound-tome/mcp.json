@@ -1,0 +1,12 @@
+{
+  "version": "1",
+  "tools": [
+    {
+      "name": "lexicon.get",
+      "description": "Retrieve archaic/mystical words",
+      "args": {
+        "category": "string"
+      }
+    }
+  ]
+}
