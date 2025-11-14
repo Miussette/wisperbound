@@ -7,7 +7,7 @@ An interactive mystical grimoire that transforms your whispered intentions into 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Next.js](https://img.shields.io/badge/Next.js-16.0-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
-
+DEMO: https://the-wisperbound-tome.vercel.app/
 ## ✨ Features
 
 ### 🔮 Spell Generation
