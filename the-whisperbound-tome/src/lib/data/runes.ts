@@ -1,0 +1,178 @@
+export interface Rune {
+  name: string;
+  symbol: string;
+  meaning: string;
+  description: string;
+  keywords: string[];
+}
+
+export const ELDER_FUTHARK_RUNES: Rune[] = [
+  {
+    name: "Fehu",
+    symbol: "ᚠ",
+    meaning: "Cattle, Wealth",
+    description: "represents wealth, abundance, and prosperity. symbolizes material possessions and the power they bring",
+    keywords: ["wealth", "abundance", "prosperity", "success"],
+  },
+  {
+    name: "Uruz",
+    symbol: "ᚢ",
+    meaning: "Aurochs, Strength",
+    description: "embodies physical strength, vitality, and primal power. represents untamed force and endurance",
+    keywords: ["strength", "vitality", "power", "endurance"],
+  },
+  {
+    name: "Thurisaz",
+    symbol: "ᚦ",
+    meaning: "Giant, Thorn",
+    description: "signifies protection through conflict. represents defensive force and the power to overcome obstacles",
+    keywords: ["protection", "defense", "conflict", "breakthrough"],
+  },
+  {
+    name: "Ansuz",
+    symbol: "ᚨ",
+    meaning: "God, Odin",
+    description: "represents divine wisdom, communication, and inspiration. the rune of poets and seers",
+    keywords: ["wisdom", "communication", "inspiration", "divine"],
+  },
+  {
+    name: "Raidho",
+    symbol: "ᚱ",
+    meaning: "Journey, Wagon",
+    description: "symbolizes travel, movement, and life's journey. represents both physical and spiritual paths",
+    keywords: ["journey", "travel", "movement", "progress"],
+  },
+  {
+    name: "Kenaz",
+    symbol: "ᚲ",
+    meaning: "Torch, Fire",
+    description: "embodies knowledge, creativity, and transformation. the inner fire that illuminates darkness",
+    keywords: ["knowledge", "creativity", "transformation", "illumination"],
+  },
+  {
+    name: "Gebo",
+    symbol: "ᚷ",
+    meaning: "Gift, Exchange",
+    description: "represents generosity, partnership, and balance. symbolizes the sacred exchange between beings",
+    keywords: ["gift", "partnership", "balance", "exchange"],
+  },
+  {
+    name: "Wunjo",
+    symbol: "ᚹ",
+    meaning: "Joy, Harmony",
+    description: "embodies joy, harmony, and well-being. represents the alignment of will with higher purpose",
+    keywords: ["joy", "harmony", "happiness", "fulfillment"],
+  },
+  {
+    name: "Hagalaz",
+    symbol: "ᚺ",
+    meaning: "Hail, Disruption",
+    description: "signifies uncontrolled forces and necessary destruction. represents transformation through chaos",
+    keywords: ["disruption", "chaos", "transformation", "change"],
+  },
+  {
+    name: "Nauthiz",
+    symbol: "ᚾ",
+    meaning: "Need, Necessity",
+    description: "represents constraint, necessity, and resistance. teaches patience and the value of struggle",
+    keywords: ["need", "constraint", "patience", "resistance"],
+  },
+  {
+    name: "Isa",
+    symbol: "ᛁ",
+    meaning: "Ice, Stillness",
+    description: "embodies stillness, concentration, and self-preservation. represents the pause before action",
+    keywords: ["stillness", "ice", "concentration", "pause"],
+  },
+  {
+    name: "Jera",
+    symbol: "ᛃ",
+    meaning: "Year, Harvest",
+    description: "symbolizes cycles, harvest, and natural order. represents the rewards of patient effort",
+    keywords: ["harvest", "cycles", "reward", "patience"],
+  },
+  {
+    name: "Eihwaz",
+    symbol: "ᛇ",
+    meaning: "Yew Tree, Endurance",
+    description: "represents endurance, reliability, and connection between worlds. the axis between life and death",
+    keywords: ["endurance", "reliability", "connection", "transformation"],
+  },
+  {
+    name: "Perthro",
+    symbol: "ᛈ",
+    meaning: "Fate, Mystery",
+    description: "embodies fate, chance, and hidden things. represents the mysteries of wyrd and destiny",
+    keywords: ["fate", "mystery", "chance", "destiny"],
+  },
+  {
+    name: "Algiz",
+    symbol: "ᛉ",
+    meaning: "Elk, Protection",
+    description: "signifies divine protection and spiritual defense. represents the connection to higher powers",
+    keywords: ["protection", "defense", "spiritual", "divine"],
+  },
+  {
+    name: "Sowilo",
+    symbol: "ᛊ",
+    meaning: "Sun, Success",
+    description: "embodies success, vitality, and life force. represents the power of the sun and victory",
+    keywords: ["success", "vitality", "victory", "life"],
+  },
+  {
+    name: "Tiwaz",
+    symbol: "ᛏ",
+    meaning: "Tyr, Justice",
+    description: "represents honor, justice, and self-sacrifice. the warrior's rune of righteous action",
+    keywords: ["justice", "honor", "sacrifice", "warrior"],
+  },
+  {
+    name: "Berkano",
+    symbol: "ᛒ",
+    meaning: "Birch, Growth",
+    description: "symbolizes growth, renewal, and fertility. represents new beginnings and nurturing energy",
+    keywords: ["growth", "renewal", "fertility", "beginning"],
+  },
+  {
+    name: "Ehwaz",
+    symbol: "ᛖ",
+    meaning: "Horse, Movement",
+    description: "embodies trust, partnership, and progress. represents harmonious movement and cooperation",
+    keywords: ["trust", "partnership", "progress", "harmony"],
+  },
+  {
+    name: "Mannaz",
+    symbol: "ᛗ",
+    meaning: "Man, Humanity",
+    description: "represents the self, humanity, and social order. embodies human consciousness and community",
+    keywords: ["humanity", "self", "community", "consciousness"],
+  },
+  {
+    name: "Laguz",
+    symbol: "ᛚ",
+    meaning: "Water, Flow",
+    description: "symbolizes water, intuition, and the unconscious. represents the flow of life and emotions",
+    keywords: ["water", "intuition", "flow", "emotions"],
+  },
+  {
+    name: "Ingwaz",
+    symbol: "ᛜ",
+    meaning: "Ing, Fertility",
+    description: "embodies potential, gestation, and internal growth. represents the seed of new possibilities",
+    keywords: ["potential", "fertility", "growth", "seed"],
+  },
+  {
+    name: "Dagaz",
+    symbol: "ᛞ",
+    meaning: "Day, Awakening",
+    description: "signifies breakthrough, awakening, and transformation. represents the dawn of new awareness",
+    keywords: ["awakening", "breakthrough", "transformation", "dawn"],
+  },
+  {
+    name: "Othala",
+    symbol: "ᛟ",
+    meaning: "Ancestral Property",
+    description: "represents heritage, inheritance, and ancestral wisdom. embodies the connection to one's roots",
+    keywords: ["heritage", "ancestry", "inheritance", "roots"],
+  },
+];

@@ -1,0 +1,326 @@
+@import "tailwindcss";
+
+:root {
+  /* Paleta Principal - Cian Arcano */
+  --cyan-arcane: #3DF5FF;
+  --cyan-deep: #2CC7D4;
+  --cyan-turquoise: #147C85;
+  
+  /* Fondos */
+  --stellar-black: #05070A;
+  --obsidian-blue: #0A131A;
+  --slate-arcane: #0F1C23;
+  
+  /* Luz y Efectos */
+  --nebular-glow: #8BFFFF;
+  --dimensional-mist: #4E6B75;
+  --ghost-particles: #8CB9C6;
+  
+  /* Contraste y Lectura */
+  --neon-white: #D7FAFF;
+  --astral-smoke: #8FA7AD;
+  --cosmic-graphite: #516268;
+  
+  /* Aliases para compatibilidad */
+  --parchment: var(--stellar-black);
+  --ink: var(--neon-white);
+  --ink-faded: var(--cyan-deep);
+  --ink-light: var(--astral-smoke);
+}
+
+@theme inline {
+  --color-background: var(--stellar-black);
+  --color-foreground: var(--neon-white);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--stellar-black);
+  color: var(--neon-white);
+  font-family: "Crimson Text", Georgia, "Times New Roman", serif;
+  letter-spacing: 0.03em;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%233DF5FF" d="M21.71 2.29a1 1 0 0 0-1.42 0l-18 18a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l18-18a1 1 0 0 0 0-1.42z"/><path fill="%233DF5FF" d="M3 3h2v18H3z"/></svg>'), auto;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(61, 245, 255, 0.02) 2px,
+      rgba(61, 245, 255, 0.02) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(61, 245, 255, 0.02) 2px,
+      rgba(61, 245, 255, 0.02) 4px
+    );
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at center, transparent 0%, rgba(10, 19, 26, 0.8) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes inkReveal {
+  from {
+    opacity: 0;
+    filter: blur(2px);
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+@keyframes inkDrip {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes quillWrite {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.animate-inkReveal {
+  animation: inkReveal 2s ease-out;
+}
+
+.animate-inkDrip {
+  animation: inkDrip 0.8s ease-out;
+}
+
+.ornamental-divider {
+  position: relative;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.ornamental-divider::before,
+.ornamental-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--cyan-deep),
+    transparent
+  );
+  box-shadow: 0 0 4px var(--cyan-arcane);
+}
+
+.ornamental-divider::before {
+  left: 0;
+}
+
+.ornamental-divider::after {
+  right: 0;
+}
+
+.ornamental-divider span {
+  display: inline-block;
+  padding: 0 1rem;
+  color: var(--cyan-arcane);
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px var(--cyan-arcane), 0 0 20px var(--cyan-deep);
+}
+
+.parchment-border {
+  border: 2px solid var(--cyan-deep);
+  border-radius: 4px;
+  box-shadow: 
+    inset 0 0 20px rgba(61, 245, 255, 0.1),
+    0 0 10px rgba(61, 245, 255, 0.2),
+    0 2px 8px rgba(61, 245, 255, 0.3);
+  background: var(--obsidian-blue);
+}
+
+.ink-text {
+  color: var(--neon-white);
+  text-shadow: 0 0 10px rgba(61, 245, 255, 0.3);
+}
+
+.ink-text-faded {
+  color: var(--cyan-deep);
+  text-shadow: 0 0 5px rgba(44, 199, 212, 0.5);
+}
+
+.ink-text-light {
+  color: var(--astral-smoke);
+}
+
+input::placeholder {
+  color: var(--astral-smoke);
+  opacity: 0.6;
+}
+
+input {
+  background: var(--obsidian-blue) !important;
+  color: var(--neon-white) !important;
+}
+
+button {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%233DF5FF" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'), pointer;
+}
+
+button:hover {
+  text-shadow: 0 0 10px var(--cyan-arcane);
+}
+
+.spell-section {
+  animation: inkReveal 1.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.spell-section:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.spell-section:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.spell-section:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.ritual-step {
+  animation: inkDrip 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.ritual-step:nth-child(1) { animation-delay: 0.1s; }
+.ritual-step:nth-child(2) { animation-delay: 0.2s; }
+.ritual-step:nth-child(3) { animation-delay: 0.3s; }
+.ritual-step:nth-child(4) { animation-delay: 0.4s; }
+.ritual-step:nth-child(5) { animation-delay: 0.5s; }
+
+.incantation-line {
+  animation: inkDrip 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.incantation-line:nth-child(1) { animation-delay: 0.2s; }
+.incantation-line:nth-child(2) { animation-delay: 0.4s; }
+.incantation-line:nth-child(3) { animation-delay: 0.6s; }
+.incantation-line:nth-child(4) { animation-delay: 0.8s; }
+
+.sigil-symbol {
+  filter: drop-shadow(0 0 8px var(--cyan-arcane)) drop-shadow(0 0 15px var(--cyan-deep));
+  animation: inkReveal 1.2s ease-out, sigilGlow 3s ease-in-out infinite;
+  color: var(--cyan-arcane);
+}
+
+@keyframes sigilGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px var(--cyan-arcane)) drop-shadow(0 0 15px var(--cyan-deep));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px var(--nebular-glow)) drop-shadow(0 0 25px var(--cyan-arcane));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+.welcome-logo {
+  position: relative;
+  animation: floatIn 2s ease-out;
+}
+
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+button.animate-pulse {
+  animation: gentlePulse 3s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
